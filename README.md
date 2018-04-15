@@ -64,3 +64,18 @@ yarn test:coverage:open
 ```
 yarn lint
 ```
+
+Linting JS only
+```
+yarn lint:js
+```
+
+Fixing JS
+```
+yarn lint:js:fix
+```
+
+Linting Styles only
+```
+yarn lint:styles
+```

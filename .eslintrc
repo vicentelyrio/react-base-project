@@ -10,10 +10,6 @@
     "jsx-a11y",
     "import"
   ],
-    "ecmaFeatures": {
-      "jsx": true,
-      "modules": true
-    },
   "globals": {
     "_": true
   },

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
+import PropTypes from 'prop-types'
 
 class HelloMessage extends Component {
   render() {
@@ -9,6 +10,10 @@ class HelloMessage extends Component {
       </div>
     )
   }
+}
+
+HelloMessage.propTypes = {
+  name: PropTypes.string
 }
 
 const renderApplication = () => {
