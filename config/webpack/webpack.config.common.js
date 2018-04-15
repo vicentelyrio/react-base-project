@@ -7,6 +7,8 @@ const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin')
 const DashboardPlugin = require('webpack-dashboard/plugin')
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 const ErrorOverlayPlugin = require('error-overlay-webpack-plugin')
+const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin')
+const Jarvis = require('webpack-jarvis')
 
 const html = require('./webpack.plugin.html')
 const favicon = require('./webpack.plugin.favicon')
@@ -39,10 +41,12 @@ exports.setup = function(PATHS) {
       extensions: ['.js', '.styl']
     },
     plugins: [
+      new ErrorOverlayPlugin(),
       new FriendlyErrorsWebpackPlugin(),
+      new DuplicatePackageCheckerPlugin(),
       new CaseSensitivePathsPlugin(),
-      new DashboardPlugin(),
-      new ErrorOverlayPlugin()
+      new Jarvis(),
+      new DashboardPlugin()
     ],
     stats: {
       assets: true,
@@ -75,6 +79,7 @@ exports.setup = function(PATHS) {
   return merge(
     common,
     html.setup(PATHS),
+    favicon.setup(PATHS),
     loaderSvgs.setup(PATHS),
     loaderImages.setup(PATHS),
     loaderJavascript.setup(PATHS)

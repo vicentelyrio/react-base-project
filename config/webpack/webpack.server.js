@@ -14,12 +14,6 @@ exports.setup = function(PATHS) {
       overlay: {
         errors: true,
         warnings: false
-      },
-      proxy: {
-        '/api': {
-          target: PATHS.api,
-          pathRewrite: { '^/api': '' }
-        }
       }
     },
     plugins: [
