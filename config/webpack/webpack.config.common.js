@@ -78,8 +78,8 @@ exports.setup = function(PATHS) {
 
   return merge(
     common,
-    html.setup(PATHS),
     favicon.setup(PATHS),
+    html.setup(PATHS),
     loaderSvgs.setup(PATHS),
     loaderImages.setup(PATHS),
     loaderJavascript.setup(PATHS)

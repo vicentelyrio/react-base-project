@@ -1,7 +1,17 @@
 {
   "presets": [
-    "es2015",
     "react",
+    ["es2015", { "modules": false }],
     "stage-1"
-  ]
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "babel-plugin-annotate-console-log"
+      ]
+    },
+    "test": {
+      "presets": [ "es2015", "react", "stage-1" ]
+    }
+  }
 }

@@ -12,8 +12,7 @@ const sourceMapType = {
 exports.setup = function(PATHS) {
   return merge(
     sourceMapType,
-    // styles.setup(PATHS),
-    // eslint.setup(PATHS),
-    // server.setup(PATHS)
+    styles.setup(PATHS),
+    server.setup(PATHS)
   )
 }

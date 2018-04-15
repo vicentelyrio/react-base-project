@@ -1,9 +1,29 @@
-function component(text = "Hello world") {
-  const element = document.createElement("div");
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 
-  element.innerHTML = text;
+class HelloMessage extends Component {
+  render() {
+    return (
+      <div>
+        Hello {this.props.name}
+      </div>
+    )
+  }
+}
 
-  return element;
-};
+const renderApplication = () => {
+  const applicationDOMElement = document.getElementById('app')
+  const applicationElement = (
+    <HelloMessage name="Fulano Taylor" />
+  )
 
-document.body.appendChild(component());
+  ReactDOM.render(applicationElement, applicationDOMElement)
+}
+
+const rootInstance = renderApplication()
+
+if(module.hot) {
+  module.hot.accept({
+    getRootInstances: () => ([ rootInstance ])
+  })
+}
