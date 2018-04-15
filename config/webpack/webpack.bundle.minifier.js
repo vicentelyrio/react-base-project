@@ -1,6 +1,6 @@
 'use strict'
 
-const webpack = require('webpack')
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 exports.setup = function(PATHS) {
   return {
@@ -9,13 +9,10 @@ exports.setup = function(PATHS) {
       filename: '[name].[chunkhash].js',
       chunkFilename: '[name].[chunkhash].js'
     },
-    plugins: [
-      new webpack.DefinePlugin({
-        'process.env': {
-          NODE_ENV: JSON.stringify('production')
-        }
-      }),
-      new webpack.optimize.UglifyJsPlugin()
-    ]
+    optimization: {
+      minimizer: [
+        new UglifyJSPlugin()
+      ]
+    }
   }
 }

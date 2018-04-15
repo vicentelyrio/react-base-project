@@ -1,9 +1,8 @@
 const path = require('path')
 
-const root = path.resolve(__dirname, '../../')
-
 exports.setup = function(root) {
   return {
+    root,
     src: path.resolve(root, 'src'),
     fixtures: path.resolve(root, 'fixtures'),
     build: path.resolve(root, 'dist'),

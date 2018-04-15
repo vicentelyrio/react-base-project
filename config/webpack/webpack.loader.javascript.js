@@ -8,7 +8,7 @@ exports.setup = function(PATHS) {
       rules: [
         {
           test: /\.js?$/,
-          include: [PATHS.web, PATHS.factories],
+          include: [ PATHS.src, PATHS.fixtures ],
           exclude: /(node_modules)/,
           loader: 'babel-loader',
           options: {

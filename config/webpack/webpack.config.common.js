@@ -77,6 +77,6 @@ exports.setup = function(PATHS) {
     html.setup(PATHS),
     loaderSvgs.setup(PATHS),
     loaderImages.setup(PATHS),
-    // loaderJavascript.setup(PATHS)
+    loaderJavascript.setup(PATHS)
   )
 }
