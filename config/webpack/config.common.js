@@ -10,12 +10,12 @@ const ErrorOverlayPlugin = require('error-overlay-webpack-plugin')
 const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin')
 const Jarvis = require('webpack-jarvis')
 
-const html = require('./webpack.plugin.html')
-const favicon = require('./webpack.plugin.favicon')
+const html = require('./plugin.html')
+const favicon = require('./plugin.favicon')
 
-const loaderImages = require('./webpack.loader.images')
-const loaderSvgs = require('./webpack.loader.svgs')
-const loaderJavascript = require('./webpack.loader.javascript')
+const loaderImages = require('./loader.images')
+const loaderSvgs = require('./loader.svgs')
+const loaderJavascript = require('./loader.javascript')
 
 exports.setup = function(PATHS) {
   const common = {
@@ -34,7 +34,7 @@ exports.setup = function(PATHS) {
         'node_modules'
       ],
       alias: {
-        web: PATHS.src,
+        src: PATHS.src,
         fixtures: PATHS.fixtures
       },
       descriptionFiles: ['package.json'],
@@ -47,39 +47,13 @@ exports.setup = function(PATHS) {
       new CaseSensitivePathsPlugin(),
       new Jarvis(),
       new DashboardPlugin()
-    ],
-    stats: {
-      assets: true,
-      cached: true,
-      cachedAssets: true,
-      children: true,
-      chunks: true,
-      chunkModules: true,
-      chunkOrigins: true,
-      colors: true,
-      depth: true,
-      entrypoints: true,
-      errors: true,
-      errorDetails: true,
-      hash: true,
-      maxModules: 15,
-      modules: true,
-      moduleTrace: true,
-      performance: true,
-      providedExports: false,
-      publicPath: true,
-      reasons: true,
-      source: true,
-      timings: true,
-      version: true,
-      warnings: true
-    }
+    ]
   }
 
   return merge(
     common,
-    favicon.setup(PATHS),
     html.setup(PATHS),
+    favicon.setup(PATHS),
     loaderSvgs.setup(PATHS),
     loaderImages.setup(PATHS),
     loaderJavascript.setup(PATHS)

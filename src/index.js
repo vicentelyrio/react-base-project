@@ -1,25 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
-import PropTypes from 'prop-types'
+import { BrowserRouter, Route } from 'react-router-dom'
 
-class HelloMessage extends Component {
-  render() {
-    return (
-      <div>
-        Hello {this.props.name}
-      </div>
-    )
-  }
-}
+import Main from 'src/layouts/Main'
 
-HelloMessage.propTypes = {
-  name: PropTypes.string
-}
-
-const renderApplication = () => {
+function renderApplication() {
   const applicationDOMElement = document.getElementById('app')
+
   const applicationElement = (
-    <HelloMessage name="Fulano Taylor" />
+    <BrowserRouter>
+      <Route component={Main} />
+    </BrowserRouter>
   )
 
   ReactDOM.render(applicationElement, applicationDOMElement)

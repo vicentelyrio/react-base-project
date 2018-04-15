@@ -2,8 +2,8 @@
 
 const merge = require('webpack-merge')
 
-const server = require('./webpack.server')
-const styles = require('./webpack.loader.styles')
+const server = require('./server')
+const styles = require('./loader.styles')
 
 const sourceMapType = {
   devtool: 'eval-source-map'
