@@ -1,0 +1,40 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2018-04-18T02:56:18.058Z\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"MIME-Version: 1.0\n"
+"X-Generator: Poedit 2.0.6\n"
+"Project-Id-Version: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: pt_BR\n"
+
+#. [contact]
+#. defaultMessage is:
+#. Contact
+#. [contact]
+#. defaultMessage is:
+#. Contact
+#: locales/src/layouts/Main/Main.json locales/src/views/Contact/Contact.json
+msgid "Contact"
+msgstr "Contato"
+
+#. [hello]
+#. defaultMessage is:
+#. Hello
+#: locales/src/layouts/Main/Main.json
+msgid "Hello"
+msgstr "Olá"
+
+#. [home]
+#. defaultMessage is:
+#. Home
+#. [home]
+#. defaultMessage is:
+#. Home
+#: locales/src/layouts/Main/Main.json locales/src/views/Home/Home.json
+msgid "Home"
+msgstr "Início"

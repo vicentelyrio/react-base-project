@@ -56,6 +56,7 @@ exports.setup = function(PATHS) {
     favicon.setup(PATHS),
     loaderSvgs.setup(PATHS),
     loaderImages.setup(PATHS),
-    loaderJavascript.setup(PATHS)
+    loaderJavascript.setup(PATHS),
+    // loaderJson.setup(PATHS)
   )
 }

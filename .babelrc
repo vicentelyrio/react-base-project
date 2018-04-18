@@ -4,6 +4,11 @@
     ["es2015", { "modules": false }],
     "stage-1"
   ],
+  "plugins": [
+    ["react-intl", {
+        "messagesDir": "./locales"
+    }]
+  ],
   "env": {
     "development": {
       "plugins": [

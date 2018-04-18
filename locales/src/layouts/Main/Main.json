@@ -1,0 +1,14 @@
+[
+  {
+    "id": "hello",
+    "defaultMessage": "Hello"
+  },
+  {
+    "id": "home",
+    "defaultMessage": "Home"
+  },
+  {
+    "id": "contact",
+    "defaultMessage": "Contact"
+  }
+]

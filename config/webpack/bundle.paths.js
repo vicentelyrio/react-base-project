@@ -5,6 +5,7 @@ exports.setup = function(root) {
     root,
     src: path.resolve(root, 'src'),
     fixtures: path.resolve(root, 'fixtures'),
+    locales: path.resolve(root, 'locales'),
     build: path.resolve(root, 'dist'),
     fonts: path.resolve(root, 'src/assets/fonts'),
     images: path.resolve(root, 'src/assets/images'),

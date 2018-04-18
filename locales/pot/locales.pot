@@ -1,0 +1,37 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2018-04-18T02:56:18.058Z\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"MIME-Version: 1.0\n"
+"X-Generator: react-intl-po\n"
+
+
+#: ./locales/src/layouts/Main/Main.json
+#. [contact]
+#. defaultMessage is:
+#. Contact
+#: ./locales/src/views/Contact/Contact.json
+#. [contact]
+#. defaultMessage is:
+#. Contact
+msgid "Contact"
+msgstr ""
+
+#: ./locales/src/layouts/Main/Main.json
+#. [hello]
+#. defaultMessage is:
+#. Hello
+msgid "Hello"
+msgstr ""
+
+#: ./locales/src/layouts/Main/Main.json
+#. [home]
+#. defaultMessage is:
+#. Home
+#: ./locales/src/views/Home/Home.json
+#. [home]
+#. defaultMessage is:
+#. Home
+msgid "Home"
+msgstr ""
