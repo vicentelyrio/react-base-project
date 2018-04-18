@@ -6,7 +6,7 @@ exports.setup = function(PATHS) {
       rules: [
         {
           test: /\.(css|styl)/,
-          include: PATHS.src,
+          include: [PATHS.src, PATHS.storybook],
           exclude: /(node_modules)/,
           use: ['style-loader', 'css-loader', 'stylus-loader']
         }

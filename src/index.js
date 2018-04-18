@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Route } from 'react-router-dom'
+import queryString from 'query-string'
 
 import { addLocaleData, IntlProvider } from 'react-intl'
 import en from 'react-intl/locale-data/en'
@@ -10,14 +11,17 @@ import es from 'react-intl/locale-data/es'
 import Main from 'src/layouts/Main'
 
 const { language, languages, userLanguage } = navigator
-const locale = (languages && languages[0]) || language || userLanguage || 'pt-BR'
+const userLocale = (languages && languages[0]) || language || userLanguage || 'pt-BR'
+const locale = queryString.parse(location.search).lang || userLocale
+const normalizedLocale = locale.replace('-', '_')
+
 const langParts = locale.replace('-', '_').split('_')
 const lang = langParts[0]
 
 addLocaleData([...en, ...pt, ...es])
 
 function renderApplication() {
-  const messages = require(`src/assets/locales/${lang}.json`)
+  const messages = require(`src/assets/locales/${normalizedLocale || lang}.json`)
   const applicationDOMElement = document.getElementById('app')
 
   const applicationElement = (
