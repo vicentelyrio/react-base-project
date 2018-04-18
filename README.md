@@ -25,57 +25,75 @@ BemClassNames
 ## Installing ##
 
 ```
-yarn
+$ yarn
 ```
 
 ## Running ##
 
 ```
-yarn start
+$ yarn start
 ```
 
 Using Webpack Dashboard
 ```
-yarn start:dashboard
+$ yarn start:dashboard
 ```
 
 ## Testing ##
 
 ```
-yarn test
+$ yarn test
 ```
 
 Watching
 ```
-yarn test:watch
+$ yarn test:watch
 ```
 
 Coverage
 ```
-yarn test:coverage
+$ yarn test:coverage
 ```
 
 Open Coverage Report (osx only)
 ```
-yarn test:coverage:open
+$ yarn test:coverage:open
 ```
 
 ## Lint ##
 ```
-yarn lint
+$ yarn lint
 ```
 
 Linting JS only
 ```
-yarn lint:js
+$ yarn lint:js
 ```
 
 Fixing JS
 ```
-yarn lint:js:fix
+$ yarn lint:js:fix
 ```
 
 Linting Styles only
 ```
-yarn lint:styles
+$ yarn lint:styles
+```
+
+## i18n ##
+
+#### 1. Create entries using `react-intl`'s `FormattedMessage` ####
+
+#### 2. Keys are created automatically on `locales/src` ####
+
+#### 3. Export keys to `.pot` file with ####
+```
+$ yarn i18n:export:pot
+```
+
+#### 4. Translate `.pot` file to a `.po` file using some editor like `Poedit` ####
+
+#### 5. Transform translated `.po` files in to json for the App to load it ####
+```
+$ yarn i18n:export:json
 ```
